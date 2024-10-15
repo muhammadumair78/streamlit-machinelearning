@@ -64,13 +64,13 @@ target_mapper = {
 def target_encode(val):
   return target_mapper[val]
 
-y = Y_raw.apply(target_encode)
+Y = Y_raw.apply(target_encode)
 
 with st.expander('Data preparation'):
   st.write('**Encoded X**')
   input_row
   st.write('**Encoded Y**')
-  y
+  Y
 
 # Model Training
 clf = RandomForestClassifier()

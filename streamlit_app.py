@@ -46,13 +46,12 @@ with st.expander('Input Features'):
   input_df
   st.write('**Combined Penguin Data**')
   input_penguins
-  st.write('**Input Row**')
-  input_row
 
 # Encode x
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 input_row = df_penguins[:1]
+input_row
 
 # Encode y
 target_mapper = {

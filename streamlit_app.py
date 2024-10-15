@@ -16,3 +16,7 @@ with st.expander('Data'):
   st.write('**Y**')
   Y = df.species
   Y
+
+with st.expander('Data Visualizations'):
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+    st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')

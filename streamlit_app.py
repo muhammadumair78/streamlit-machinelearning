@@ -110,7 +110,7 @@ st.dataframe(df_prediction_proba, column_config={
     min_value=0,
     max_value=1
   ),
-})
+}, hide_index=True)
 st.success(str(penguin_species[prediction][0]))
 
 

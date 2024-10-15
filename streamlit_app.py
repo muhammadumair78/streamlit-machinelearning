@@ -42,6 +42,7 @@ with st.sidebar:
 
     input_df = pd.DataFrame(data, index=[0])
     input_penguins = pd.concat([input_df, X_raw], axis=0)
+    X = input_penguins[1:]
 
 with st.expander('Input Features'):
   st.write('**Input Penguin**')
@@ -74,7 +75,7 @@ with st.expander('Data preparation'):
 
 # Model Training
 clf = RandomForestClassifier()
-clf = clf.fit(X_raw, Y)
+clf = clf.fit(X, Y)
 
 # Apply model to make prediction
 prediction = clf.predict(input_raw)
@@ -84,7 +85,7 @@ df_prediction_proba = pr.DataFrame(prediction_proba)
 df_prediction_proba.rename(column={'0': 'Adelie', '1': 'Chinstrap', '2': 'Gentoo'})
 
 st.subheader('Predicted Species')
-# penguin_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-# st.success(str(penguin_species[prediction][0]))
+penguin_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str(penguin_species[prediction][0]))
 
 

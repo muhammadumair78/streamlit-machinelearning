@@ -97,14 +97,14 @@ st.dataframe(df_prediction_proba, column_config={
     max_value=1
   ),
   'Chinstrap': st.column_config.ProgressColumn(
-    'Adelie',
+    'Chinstrap',
     format='%f',
     width='medium',
     min_value=0,
     max_value=1
   ),
   'Gentoo': st.column_config.ProgressColumn(
-    'Adelie',
+    'Gentoo',
     format='%f',
     width='medium',
     min_value=0,

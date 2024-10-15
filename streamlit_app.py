@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-st.set_page_config(page_title='Machinelearning App', page_icon=':rocket:')
+st.set_page_config(page_title='Machinelearning App', page_icon=':material/add_circle:')
 st.title('Machinelearning App')
 st.info('This is the machine learning app!')
 

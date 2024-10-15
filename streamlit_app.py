@@ -88,7 +88,7 @@ df_prediction_proba.rename(columns={'0': 'Adelie', '1': 'Chinstrap', '2': 'Gento
 st.subheader('Predicted Species')
 penguin_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 df_prediction_proba
-st.dataframe(penguin_species, column_config={
+st.dataframe(df_prediction_proba, column_config={
   'Adelie': st.column_config.ProgressColumn(
     'Adelie',
     format='%f',

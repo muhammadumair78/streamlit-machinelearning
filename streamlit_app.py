@@ -38,5 +38,5 @@ with st.sidebar:
       'body_mass_g': body_mass_g 
     }
 
-    input_df = pd.DataFrame(data, index[0])
+    input_df = pd.DataFrame(data, index=[0])
     input_df

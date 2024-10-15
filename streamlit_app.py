@@ -81,7 +81,7 @@ clf = clf.fit(X, Y)
 prediction = clf.predict(input_raw)
 prediction_proba = clf.predict_proba(input_raw)
 
-df_prediction_proba = pr.DataFrame(prediction_proba)
+df_prediction_proba = pd.DataFrame(prediction_proba)
 df_prediction_proba.rename(column={'0': 'Adelie', '1': 'Chinstrap', '2': 'Gentoo'})
 
 st.subheader('Predicted Species')
